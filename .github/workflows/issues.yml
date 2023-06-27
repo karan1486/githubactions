@@ -20,6 +20,7 @@ jobs:
               repo: context.repo.repo,
               labels: ["needs-triage"]
             })
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           issuesOpenedReactions: 'New Issue, +1'
           issuesOpenedComment: |
             New Issue is re-opened.The Dev team will get back.
