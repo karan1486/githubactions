@@ -11,7 +11,6 @@ jobs:
       issues: write
     steps:
       - uses: actions/github-script@v6
-      - uses: wow-actions/auto-comment@v1   
         with:
           script: |
             github.rest.issues.addLabels({
@@ -20,6 +19,8 @@ jobs:
               repo: context.repo.repo,
               labels: ["needs-triage"]
             })
+      - uses: wow-actions/auto-comment@v1
+        with:   
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           issuesOpenedReactions: 'New Issue, +1'
           issuesOpenedComment: |
