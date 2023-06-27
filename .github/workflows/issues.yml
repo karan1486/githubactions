@@ -19,3 +19,9 @@ jobs:
               repo: context.repo.repo,
               labels: ["needs-triage"]
             })
+     - uses: wow-actions/auto-comment@v1
+        with:
+          issuesOpenedReactions: 'New Issue, +1'
+          issuesOpenedComment: |
+            👋 @{{ author }}
+            New Issue is re-opened.The Dev team will get back.
