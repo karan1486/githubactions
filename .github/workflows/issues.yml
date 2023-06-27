@@ -19,11 +19,6 @@ jobs:
               repo: context.repo.repo,
               labels: ["needs-triage"]
             })
-    Auto_Commenter: # name of the job
-    runs-on: ubuntu-latest
-    permissions:
-      issues: write
-    steps:
       - uses: wow-actions/auto-comment@v1
         with:   
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
