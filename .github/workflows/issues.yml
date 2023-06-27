@@ -5,7 +5,7 @@ on:
       - reopened 
       - opened
 jobs:
-  label_issues: Label_Issues
+  label_issues: First Job
     runs-on: ubuntu-latest
     permissions:
       issues: write
@@ -23,5 +23,4 @@ jobs:
         with:
           issuesOpenedReactions: 'New Issue, +1'
           issuesOpenedComment: |
-            👋 @{{ author }}
             New Issue is re-opened.The Dev team will get back.
